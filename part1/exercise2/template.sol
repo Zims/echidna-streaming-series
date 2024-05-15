@@ -7,5 +7,11 @@ contract TestToken is Token {
     }
 
     // add the property
-    function echidna_cannot_be_unpaused() public view returns (bool) {}
+    function echidna_cannot_be_unpaused() public view returns (bool) {
+        return is_paused;
+    }
+
+    function isPausable() public{
+        assert(is_paused);
+    }
 }
