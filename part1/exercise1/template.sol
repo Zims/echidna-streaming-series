@@ -8,5 +8,7 @@ contract TestToken is Token {
     }
 
     // add the property
-    function echidna_test_balance() public view returns (bool) {}
+    function echidna_test_balance() public view returns (bool) {
+        return balances[echidna_caller] <= 10000;
+    }
 }
