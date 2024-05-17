@@ -1,0 +1,15 @@
+{
+  "name": "echidna-streaming-series",
+  "version": "1.0.0",
+  "description": "Welcome to the 6-part series on how to use Echidna to fuzz like a pro! This repository has 6 folders, each of which maps to a specific workshop in the series.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.0.2"
+  }
+}
