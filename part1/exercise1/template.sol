@@ -12,3 +12,4 @@ contract TestToken is Token {
         return balances[echidna_caller] <= 10000;
     }
 }
+ 
