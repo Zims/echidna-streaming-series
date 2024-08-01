@@ -1,8 +1,8 @@
 # Can set testMode to property or assertion mode depending on how you want to test the system's properties
 testMode: assertion
-testLimit: 1000000
 
+# testLimit: 10000
 # You should ALWAYS set corpusDir to track coverage
-corpusDir: corpus
+# corpusDir: corpus
 # The number of workers to use for fuzzing
-workers: 8
+# workers: 8

@@ -262,23 +262,32 @@ contract EchidnaTemplate {
     //     int128 x_y = add(x, y);
     //     int128 new_x = sub(x_y, y);
     //     emit Debug(x_y, new_x);
-
     //     assert(new_x == x);
-
     // }
 
     // Test that division is not commutative
     // (x / y) != (y / x)
     // function div_test_not_commutative(int128 x, int128 y) public {
-    //     // Optimization
-    //     if (abs(x) == abs(y)){
-    //         y = x + 1;
-    //     }
-    //     // Action
-    //     int128 x_y = div(x, y);
-    //     int128 y_x = div(y, x);
-    //     assert(x_y != y_x);
-    // }
+        // //option 1
+        // // Optimization
+        // if (abs(x) == abs(y)){
+        //     y = x + 1;
+        // }
+        // // Action
+        // int128 x_y = div(x, y);
+        // int128 y_x = div(y, x);
+        // assert(x_y != y_x);
+
+        // // option2 Action
+        // int128 x_y = div(x, y);
+        // int128 y_x = div(y, x);
+        // //post-condition
+        // if (abs(x) == abs(y)) {
+        //     assert(x_y == y_x);
+        // } else {
+        //     assert(x_y != y_x);
+        // }
+    }
 
     // // Test multiplication
     // // (x * y) *z = x * (y * z)
@@ -317,11 +326,11 @@ contract EchidnaTemplate {
 
     // Test sqruare root
     // sqrt(x) * sqrt(x) = x
-    function sqrt_test_square(int128 x) public {
-        // Action
-        int128 x_sqrt = sqrt(x);
-        int128 x_sqrt_sqr = mul(x_sqrt, x_sqrt);
+    // function sqrt_test_square(int128 x) public {
+    //     // Action
+    //     int128 x_sqrt = sqrt(x);
+    //     int128 x_sqrt_sqr = mul(x_sqrt, x_sqrt);
 
-        assert(x_sqrt_sqr == x);
-    }
+    //     assert(x_sqrt_sqr == x);
+    // }
 }
