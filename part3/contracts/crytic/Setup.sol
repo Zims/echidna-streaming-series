@@ -33,15 +33,15 @@ contract Setup {
         user.proxy(address(testToken2), abi.encodeWithSelector(testToken2.approve.selector,address(pair),uint(-1)));
     }
 
-    function _init(uint amount1, uint amount2) internal {
+    function _mintTokens(uint amount1, uint amount2) internal {
         testToken1.mint(address(user), amount1);
         testToken2.mint(address(user), amount2);
         completed = true;
     }
 
 
-    function _between(uint val, uint low, uint high) internal pure returns(uint) {
-        return low + (val % (high-low +1)); 
+    function _between(uint value, uint low, uint high) internal pure returns(uint) {
+        return low + (value % (high-low +1)); 
     }
 
 

@@ -17,7 +17,7 @@ contract EchidnaTest is Setup {
         amount1 = _between(amount1, 1000, uint256(-1));
 
         if (!completed) {
-            _init(amount0, amount1);
+            _mintTokens(amount0, amount1);
         }
         //// State before
         uint256 lpTokenBalanceBefore = pair.balanceOf(address(user));
@@ -156,5 +156,5 @@ contract EchidnaTest is Setup {
     //         assert(balance1After == balance1Before - amount1In);
     //         assert(balance0After == balance0Before + amount0Out);
     //     }
-    }
+}
 // }
